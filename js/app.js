@@ -12,7 +12,7 @@ document.getElementById("search-btn").addEventListener('click',function(){
     alert("Hei, Please Enter a product name !!")
      return
   }else{
-    fetch(`https://fakestoreapi.com/${inputText}`)
+    fetch(`https://fakestoreapi.com/products?sort=${inputText}`)
     .then(res=>res.json())
     .then(data=>showProducts(data))
 
